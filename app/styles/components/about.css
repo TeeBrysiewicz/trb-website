@@ -1,0 +1,55 @@
+.about-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--my-red);
+  padding: 32px;
+
+  .name-container {
+    margin-top: 30%;
+
+    span {
+      font-size: 64px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    span:first-child {
+      color: var(--gray);
+      padding-right: 10px;
+    }
+    span:last-child {
+      color: var(--primary);
+    }
+  }
+
+  .details-container {
+    span {
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    span:last-child {
+      color: var(--primary);
+    }
+  }
+
+  .about {
+    margin-top: 48px;
+    color: var(--gray);
+  }
+
+  .contact-icons {
+    .icon {
+      i {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        color: white;
+        background-color: var(--gray-dark);
+        font-size: 30px;
+        padding: 15px;
+        margin: 12px;
+      }
+    }
+  }
+}
