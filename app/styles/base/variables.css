@@ -11,4 +11,14 @@
   --gray: #808080;
   --gray-light: #C0C0C0;
   --gray-dark: #404040;
+
+  --markup: #31B0EB;
+  --language: #C12fED;
+  --framework: #EB9234;
+  --database: #4F2FED;
+  --dependency: #0A8C3E;
 }
+
+/* TODO */
+/* Font sizes */
+/* Font family import */

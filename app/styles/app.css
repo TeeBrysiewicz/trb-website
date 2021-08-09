@@ -5,5 +5,9 @@
 @import 'base/variables';
 
 @import 'components/navigation';
-@import 'components/about';
 @import 'components/content';
+@import 'components/about';
+@import 'components/experience';
+@import 'components/education';
+@import 'components/skills';
+@import 'components/portfolio';
