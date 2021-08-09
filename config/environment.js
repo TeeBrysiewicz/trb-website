@@ -3,6 +3,7 @@
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'trb-website',
+    podModulePrefix: 'trb-website/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
