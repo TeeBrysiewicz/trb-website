@@ -3,6 +3,7 @@
   height: 100%;
   background-color: var(--white);
   padding: 32px;
+  margin-bottom: 600px;
 
   h1 {
     color:  var(--gray-dark);
