@@ -24,6 +24,11 @@
         font-size: 32px;
         font-weight: 600;
         text-transform: uppercase;
+
+        small {
+          font-size: 14px;
+          color: var(--gray);
+        }
       }
 
       span:nth-child(2) {

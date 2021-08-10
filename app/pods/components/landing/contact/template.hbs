@@ -1,5 +1,8 @@
-<div class="contact-container">
-  <h1>Ping</h1>
+<div
+  id="contact"
+  class="contact-container"
+>
+  <h1>Contact</h1>
 
   <form
     class="contact-form"
@@ -7,16 +10,19 @@
     method="POST"
   >
     <label>
-      <span>E</span>
+      <span>Email</span>
       <input type="email" name="_replyto">
     </label>
     <label>
-      <span>M</span>
+      <span>Message</span>
       <textarea name="message"></textarea>
     </label>
 
-    <!-- your other form fields go here -->
-
-    <button type="submit">Send</button>
+    <button type="submit">Ping</button>
   </form>
+  <div class="icon">
+    <a href="#">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
 </div>

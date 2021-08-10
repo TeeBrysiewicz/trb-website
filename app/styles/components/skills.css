@@ -15,6 +15,8 @@
     display: flex;
     border-bottom: 1px solid var(--gray-light);
     color: white;
+    margin-top: 60px;
+    text-transform: uppercase;
 
     span {
       text-transform: uppercase;
@@ -53,6 +55,15 @@
     background-color: var(--gray-dark);
   }
 
+  .block-five {
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    span {
+      color: var(--primary) !important;
+    }
+  }
+
   .skillz {
     margin-top: 20px;
     height: 64px;
@@ -60,13 +71,11 @@
     flex-wrap: wrap;
     flex-direction: row;
 
-    .skillz>* {
-      flex: 1 1 160px;
-    }
-
     .skills-unit {
       height: 48px;
-      width: 180px;
+      width: 250px;
+      min-width: 100px;
+      /*max-width: 300px;*/
       border-radius: 8px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       margin: 8px;
@@ -83,13 +92,14 @@
       }
     }
     .skills-unit:nth-child(3n) {
-      flex: 1;
-    }
-    .skills-unit:nth-child(odd) {
       flex: 2;
     }
-    .skills-unit:nth-child(4n) {
-      flex: ;
+    .skills-unit:nth-child(odd) {
+      flex: 1;
     }
+/*    .skills-unit:nth-child(4n) {
+       Add more block sizes via flex here
+      flex: ;
+    }*/
   }
 }
