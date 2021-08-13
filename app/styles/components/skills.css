@@ -1,10 +1,13 @@
 .skills-container {
   width: 100%;
-  height: 100%;
+  height: auto;
+/*  min-height: auto;
+  max-height: 100vh;*/
   background-color: var(--white);
   padding: 32px;
 
   h1 {
+    margin-top: 80px;
     color: var(--gray-dark);
     font-size: 48px;
     font-weight: 600;
@@ -12,11 +15,16 @@
   }
 
   .skills-legend {
-    display: flex;
+    display: ;
     border-bottom: 1px solid var(--gray-light);
     color: white;
-    margin-top: 60px;
+    margin-top: 30px;
     text-transform: uppercase;
+
+    @screen lg {
+      display: flex;
+      margin-top: 60px;
+    }
 
     span {
       text-transform: uppercase;
@@ -27,15 +35,21 @@
     }
 
     div {
-      flex: 1;
-      height: 36px;
-      width: 36px;
-      margin-bottom: 24px;
+      display: block;
+      padding: 4px;
       text-align: center;
-      vertical-align: middle;
-      line-height: 36px;
-      text-align: center;
-      vertical-align: middle;
+
+      @screen lg {
+        flex: 1;
+        height: 36px;
+        width: 36px;
+        margin-bottom: 24px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 36px;
+        text-align: center;
+        vertical-align: middle;
+      }
     }
   }
 
@@ -72,23 +86,35 @@
     flex-direction: row;
 
     .skills-unit {
-      height: 48px;
-      width: 250px;
-      min-width: 100px;
-      /*max-width: 300px;*/
+      height: 24px;
+      width: 150px;
+      min-width: 60px;
       border-radius: 8px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      margin: 8px;
+      margin: 4px;
       text-align: center;
       vertical-align: middle;
+
+      @screen lg {
+        height: 48px;
+        width: 250px;
+        min-width: 100px;
+        margin: 8px;
+      }
 
       span {
         width: 100%;
         text-align: center;
         color: white;
         font-weight: 400;
-        line-height: 48px;
-        padding: 8px;
+        line-height: 24px;
+        padding: 4px;
+        font-size: 12px;
+
+        @screen lg {
+          line-height: 48px;
+          padding: 8px;
+        }
       }
     }
     .skills-unit:nth-child(3n) {

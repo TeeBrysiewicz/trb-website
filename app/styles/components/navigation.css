@@ -2,12 +2,30 @@
   display: flex;
   justify-content: space-between;
   background-color: var(--primary);
-  height: 100%;
+  height: auto;
+  max-height: 80px;
   width: 100%;
-  /*line-height: 80px;*/
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  transition: min-height 2s ease-out;
+  z-index: 9999;
+  line-height: 80px;
+
+  &.open {
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: none;
+
+    .nav-links-container {
+      display: block;
+    }
+  }
 
   @screen lg {
     display: block;
@@ -58,16 +76,8 @@
     }
   }
 
-  .open {
-    display: block;
-    float: right;
-  }
-
-  .closed {
-    display: none;
-  }
-
   .nav-links-container {
+    display: none;
     position: absolute;
     top: 80px;
     left: 0;

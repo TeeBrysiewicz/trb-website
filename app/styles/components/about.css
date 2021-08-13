@@ -5,7 +5,8 @@
   padding: 32px;
 
   .name-container {
-    margin-top: 20%;
+    margin-top: 40%;
+    line-height: 48px;
 
     span {
       font-size: 64px;
@@ -18,7 +19,12 @@
       padding-right: 10px;
     }
     span:last-child {
+      font-size: 48px;
       color: var(--primary);
+
+      @screen lg {
+
+      }
     }
   }
 

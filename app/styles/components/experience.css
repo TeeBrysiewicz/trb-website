@@ -5,6 +5,7 @@
   padding: 32px;
 
   h1 {
+    margin-top: 80px;
     color: var(--gray-dark);
     font-size: 48px;
     font-weight: 600;
@@ -18,12 +19,17 @@
     .head {
       display: flex;
       justify-content: space-between;
+      line-height: 24px;
 
       span:first-child {
         color: var(--gray-dark);
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 600;
         text-transform: uppercase;
+
+        @screen lg {
+          font-size: 32px;
+        }
 
         small {
           font-size: 14px;
@@ -31,16 +37,26 @@
         }
       }
 
-      span:nth-child(3) {
+      span:last-child {
         color: var(--primary-light);
         align-self: flex-end;
+        font-size: 11px;
+        text-align: right;
+
+        @screen lg {
+          font-size: 14px;
+        }
       }
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 18px;
       font-weight: 600;
       text-transform: uppercase;
+
+      @screen lg {
+        font-size: 28px;
+      }
     }
 
     p {
