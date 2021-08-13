@@ -1,8 +1,6 @@
 .skills-container {
   width: 100%;
-  height: auto;
-/*  min-height: auto;
-  max-height: 100vh;*/
+  height: 100%;
   background-color: var(--white);
   padding: 32px;
 
@@ -80,12 +78,13 @@
 
   .skillz {
     margin-top: 20px;
-    height: 64px;
+    /*height: auto;*/
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 
     .skills-unit {
+      flex-grow: 5;
       height: 24px;
       width: 150px;
       min-width: 60px;
@@ -106,10 +105,8 @@
         width: 100%;
         text-align: center;
         color: white;
-        font-weight: 400;
-        line-height: 24px;
-        padding: 4px;
         font-size: 12px;
+        line-height: 12px;
 
         @screen lg {
           line-height: 48px;
@@ -117,12 +114,17 @@
         }
       }
     }
+
     .skills-unit:nth-child(3n) {
       flex: 2;
+      /*flex-grow: 3;*/
     }
+
     .skills-unit:nth-child(odd) {
       flex: 1;
+      /*flex-grow: 3;*/
     }
+
 /*    .skills-unit:nth-child(4n) {
        Add more block sizes via flex here
       flex: ;

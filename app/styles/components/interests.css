@@ -1,11 +1,12 @@
 .interests-container {
   width: 100%;
-  height: auot;
+  height: auto;
   background-color: var(--white);
   padding: 32px;
   margin-bottom: 100px;
 
   h1 {
+    margin-top: 80px;
     color:  var(--gray-dark);
     font-size: 48px;
     font-weight: 600;
@@ -15,16 +16,30 @@
   .photos {
     height: 100%;
     line-height: 0;
-    -webkit-column-count: 5;
+    -webkit-column-count: 2;
     -webkit-column-gap:   0px;
-    -moz-column-count:    5;
+    -moz-column-count:    2;
     -moz-column-gap:      0px;
-    column-count:         5;
+    column-count:         2;
     column-gap:           0px;
+
+    @screen lg {
+      -webkit-column-count: 5;
+      -webkit-column-gap:   0px;
+      -moz-column-count:    5;
+      -moz-column-gap:      0px;
+      column-count:         5;
+      column-gap:           0px;
+    }
   }
 
   .photos img {
     width: 100% !important;
     height: auto !important;
+
+    @screen lg {
+      width: 100% !important;
+      height: auto !important;
+    }
   }
 }
