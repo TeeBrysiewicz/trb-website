@@ -8,6 +8,10 @@
     margin-top: 40%;
     line-height: 48px;
 
+    @screen lg {
+      margin-top: 20%;
+    }
+
     span {
       font-size: 64px;
       text-transform: uppercase;
@@ -23,7 +27,7 @@
       color: var(--primary);
 
       @screen lg {
-
+        font-size: 64px;
       }
     }
   }
