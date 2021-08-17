@@ -9,7 +9,7 @@
   bottom: 0;
   overflow-y: scroll;
 
-  @screen lg {
+  @screen md {
     height: 100vh;
     width: 80%;
     position: absolute;
