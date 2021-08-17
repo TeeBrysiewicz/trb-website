@@ -82,7 +82,7 @@
     display: inline;
     margin-right: 10px;
     font-size: 36px;
-    color: var(--white);
+    color: var(--background);
 
     @screen lg {
       display: none;
@@ -100,7 +100,7 @@
     margin: 32px auto 0 auto;
     text-align: center;
     line-height: 40px;
-    color: var(--white);
+    color: var(--background);
 
     @screen lg {
       display: block;

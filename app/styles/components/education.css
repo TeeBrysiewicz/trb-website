@@ -1,12 +1,12 @@
 .education-container {
   width: 100%;
   height: 100%;
-  background-color: var(--white);
+  background-color: var(--background);
   padding: 32px;
 
   h1 {
     margin-top: 80px;
-    color:  var(--gray-dark);
+    color:  var(--text-accent-dark);
     font-size: 48px;
     font-weight: 600;
     text-transform: uppercase;
@@ -14,7 +14,7 @@
 
   .education-unit {
     margin-top: 60px;
-    color: var(--gray);
+    color: var(--text-accent);
 
     .head {
       display: flex;
@@ -22,7 +22,7 @@
       line-height: 24px;
 
       span:first-child {
-        color: var(--gray-dark);
+        color: var(--text-acent-dark);
         font-size: 24px;
         font-weight: 600;
         text-transform: uppercase;
@@ -34,7 +34,7 @@
         small {
           display: block;
           font-size: 14px;
-          color: var(--gray);
+          color: var(--text-accent);
 
           @screen lg {
             display: inline;

@@ -1,7 +1,7 @@
 .about-container {
   width: 100%;
   height: 100%;
-  background-color: var(--white);
+  background-color: var(--background);
   padding: 32px;
 
   .name-container {
@@ -19,7 +19,7 @@
     }
 
     span:first-child {
-      color: var(--gray);
+      color: var(--text-accent);
       padding-right: 10px;
     }
     span:last-child {
@@ -35,7 +35,7 @@
   .details-container {
     span {
       text-transform: uppercase;
-      color: var(--gray);
+      color: var(--text-accent);
     }
 
     span:last-child {
@@ -45,7 +45,7 @@
 
   .about {
     margin-top: 48px;
-    color: var(--gray);
+    color: var(--text-accent);
   }
 
   .contact-icons {
@@ -56,8 +56,8 @@
         height: 60px;
         width: 60px;
         border-radius: 50%;
-        color: var(--white);
-        background-color: var(--gray-dark);
+        color: var(--background);
+        background-color: var(--text-accent-dark);
         font-size: 30px;
         padding: 15px;
         margin: 16px;
