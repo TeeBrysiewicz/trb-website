@@ -15,7 +15,7 @@
   .skills-legend {
     display: ;
     border-bottom: 1px solid var(--gray-light);
-    color: white;
+    color: var(--white);
     margin-top: 30px;
     text-transform: uppercase;
 
@@ -67,7 +67,7 @@
   }
 
   .block-five {
-    background-color: white;
+    background-color: var(--white);
     color: var(--primary);
     border: 2px solid var(--primary);
     span {
@@ -101,7 +101,7 @@
       span {
         width: 100%;
         text-align: center;
-        color: white;
+        color: var(--white);
         font-size: 12px;
         line-height: 24px;
         word-wrap: break-word;

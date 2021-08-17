@@ -1,18 +1,20 @@
-:root {
+/*
+Purple Theme
   --primary: #6320EE;
   --primary-light: #8075FF;
+*/
+
+:root {
+  --primary: #086375;
+  --primary-light: #1DD3B0;
+  --alt-white: #F8F0FB;
+  --accent: #CAD5CA;
 
   --black: #211A1D;
   --white: #ffffff;
-
-  --alt-white: #F8F0FB;
-  --accent: #CAD5CA;
 
   --gray: #808080;
   --gray-light: #C0C0C0;
   --gray-dark: #404040;
 }
 
-/* TODO */
-/* Font sizes */
-/* Font family import */
