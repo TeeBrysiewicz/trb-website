@@ -1,14 +1,15 @@
-<div class="navigation-container {{if this.isOpen "open" "close"}}">
+<div class="navigation-container {{if @isOpen "open" "close"}}">
   <div class="profile-picture">
     <img src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.6435-9/54729647_10156185922318170_7721612515372695552_n.jpg?_nc_cat=111&ccb=1-4&_nc_sid=174925&_nc_ohc=N-X1XtuJW-kAX9iIdmI&_nc_oc=AQmE15nJ3Ma3voHWTiBJXlL_QXb8DhJXPe8kLVzl9HXaYvM_KQkoscJ_b79C6xc5cZepgBG-gR6eOaCtq7S4fwrc&_nc_ht=scontent-ort2-2.xx&oh=6b6717ea8c6635ebd20e443971be1488&oe=6138C8CB">
   </div>
 
   <div class="nav-icon">
-    <button {{on "click" (toggle "isOpen" this)}}>
+    {{!-- <button {{on "click" (toggle "isOpen" this)}}> --}}
+    <button {{on "click" @toggleMenu}}>
       {{#if (media "isMobile")}}
         <i class="fas fa-bars"></i>
       {{else}}
-        <i class="fas {{if this.isOpen "fa-chevron-right" "fa-chevron-left"}} "></i>
+        <i class="fas {{if @isOpen "fa-chevron-right" "fa-chevron-left"}} "></i>
       {{/if}}
     </button>
   </div>
@@ -17,7 +18,8 @@
     <ul>
       {{#each this.sections as |section|}}
         <li>
-          <a href="#{{section}}" {{on "click" (toggle "isOpen" this)}}>
+          {{!-- <a href="#{{section}}" {{on "click" (toggle "isOpen" this)}}> --}}
+          <a href="#{{section}}" {{on "click" @toggleMenu}}>
             {{section}}
           </a>
         </li>

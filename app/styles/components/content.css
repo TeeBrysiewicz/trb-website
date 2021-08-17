@@ -9,6 +9,14 @@
   bottom: 0;
   overflow-y: scroll;
 
+  &.close {
+    @screen md {
+      width: 94vw;
+      position: absolute;
+      left: 6%;
+    }
+  }
+
   @screen md {
     height: 100vh;
     width: 80%;

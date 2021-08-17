@@ -13,3 +13,12 @@
 @import 'components/portfolio';
 @import 'components/interests';
 @import 'components/contact';
+
+.ember-dark-mode-toggle {
+  margin-top: 80px;
+
+  @screen md {
+    margin-top: 16px;
+    margin-right: 16px;
+  }
+}
