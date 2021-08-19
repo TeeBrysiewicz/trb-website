@@ -6,10 +6,10 @@
 }
 
 @font-face {
-  font-family: 'Montserrat-Medium';
-  src: url(/assets/fonts/montserrat-medium.ttf) format('truetype');
+  font-family: 'Montserrat-Regular';
+  src: url(/assets/fonts/montserrat-regular.ttf) format('truetype');
 }
 
 html {
-  font-family: "Montserrat-Medium";
+  font-family: "Montserrat-Regular";
 }
