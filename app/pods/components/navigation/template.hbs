@@ -4,7 +4,6 @@
   </div>
 
   <div class="nav-icon">
-    {{!-- <button {{on "click" (toggle "isOpen" this)}}> --}}
     <button {{on "click" @toggleMenu}}>
       {{#if (media "isMobile")}}
         <i class="fas fa-bars"></i>
@@ -16,14 +15,23 @@
 
   <div class="nav-links-container">
     <ul>
-      {{#each this.sections as |section|}}
-        <li>
-          {{!-- <a href="#{{section}}" {{on "click" (toggle "isOpen" this)}}> --}}
-          <a href="#{{section}}" {{on "click" @toggleMenu}}>
-            {{section}}
-          </a>
-        </li>
-      {{/each}}
+      {{#if @model}}
+        {{#each @model as |model|}}
+          <li>
+            <LinkTo @route="items.index.show" @model={{model.id}}>
+              {{model.title}}
+            </LinkTo>
+          </li>
+        {{/each}}
+      {{else}}
+        {{#each @sections as |section|}}
+          <li>
+            <a href="#{{section}}" {{on "click" @toggleMenu}}>
+              {{section}}
+            </a>
+          </li>
+        {{/each}}
+      {{/if}}
     </ul>
   </div>
 </div>

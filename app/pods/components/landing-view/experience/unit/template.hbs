@@ -1,0 +1,18 @@
+<div class="experience-unit">
+  <div class="head">
+    <span>{{@position}}
+      <small>{{@location}}</small>
+    </span>
+    <span>{{@startFinish}}</span>
+  </div>
+
+  <h2>{{@company}}</h2>
+
+  <p>{{@details}}</p>
+
+  <ul>
+    {{#each @bullets as |bullet|}}
+      <li>{{bullet}}</li>
+    {{/each}}
+  </ul>
+</div>
