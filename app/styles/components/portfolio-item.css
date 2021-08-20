@@ -1,0 +1,113 @@
+.portfolio-item {
+  width: 90%;
+  height: auto;
+  background-color: var(--background);
+  padding: 18px;
+  margin: 100px auto;
+  position: relative;
+
+  a {
+    color: var(--primary);
+    &:hover {
+      color: var(--primary-light);
+    }
+  }
+
+  @screen lg {
+    width: 80%;
+    margin: 40px auto;
+    padding: 32px;
+  }
+
+  h1 {
+    color: var(--text-accent-dark);
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-break: break-word;
+  }
+
+  span {
+    display: block;
+    color: var(--text-accent-dark);
+    font-size: 18px;
+  }
+
+  small {
+    color: var(--text-accent);
+  }
+
+  .main-image {
+    margin: 60px auto 0;
+  }
+
+  .body {
+    width: 90%;
+    margin: 0 auto;
+
+    @screen lg {
+      width: 70%;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: var(--text-accent-dark);
+      font-size: 28px;
+    }
+
+    p {
+      margin-top: 15px;
+      color: var(--text-accent);
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    h3 {
+      margin-top: 15px;
+      color: var(--text-accent);
+      font-size: 20px;
+    }
+
+    ul {
+      margin-top: 15px;
+      margin-left: 16px;
+      color: var(--text-accent);
+      font-size: 14px;
+      border-bottom: 1px solid var(--text-accent);
+      padding-bottom: 30px;
+
+      @screen lg {
+        font-size: 20px;
+      }
+
+      li {
+        list-style-type: circle;
+      }
+    }
+  }
+
+  h4 {
+    display: block;
+    color: var(--text-accent-dark);
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .portfolio-image-gallery {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .bottom-line {
+    width: 70%;
+    margin: 0 auto;
+    height: 1px;
+    border-bottom: 1px solid var(--text-accent);
+    padding-bottom: 30px;
+  }
+}

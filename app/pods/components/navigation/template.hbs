@@ -4,7 +4,6 @@
   </div>
 
   <div class="nav-icon">
-    {{!-- <button {{on "click" (toggle "isOpen" this)}}> --}}
     <button {{on "click" @toggleMenu}}>
       {{#if (media "isMobile")}}
         <i class="fas fa-bars"></i>
@@ -15,15 +14,74 @@
   </div>
 
   <div class="nav-links-container">
-    <ul>
-      {{#each this.sections as |section|}}
-        <li>
-          {{!-- <a href="#{{section}}" {{on "click" (toggle "isOpen" this)}}> --}}
-          <a href="#{{section}}" {{on "click" @toggleMenu}}>
-            {{section}}
-          </a>
-        </li>
-      {{/each}}
+    <ul class="header-links">
+      {{#if @model}}
+        {{#each @model as |model|}}
+          <li>
+            {{#if model.title}}
+              <LinkTo
+                @route="items.index.show"
+                @model={{model.id}}
+                {{on "click" @toggleMenu}}
+              >
+                  {{model.title}}
+              </LinkTo>
+            {{/if}}
+            {{#if model.attributes.title}}
+              <LinkTo
+                @route="blog.post"
+                @model={{model.attributes.slug}}
+                {{on "click" @toggleMenu}}
+              >
+                {{model.attributes.title}}
+              </LinkTo>
+            {{/if}}
+          </li>
+        {{/each}}
+      {{else}}
+        {{#each @sections as |section|}}
+          <li>
+            <a href="#{{section}}" {{on "click" @toggleMenu}}>
+              {{section}}
+            </a>
+          </li>
+        {{/each}}
+      {{/if}}
+    </ul>
+    <ul class="footer-links">
+      <li></li>
+      <li>
+        <LinkTo @route="landing" {{on "click" @toggleMenu}}>
+          Home
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="items.index" {{on "click" @toggleMenu}}>
+          Portfolio
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="blog" {{on "click" @toggleMenu}}>
+          Blog
+        </LinkTo>
+      </li>
+      <li class="footer-icons">
+        <a
+          href="https://linkedin.com/in/teebrysiewicz"
+          title="My Linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+      <a
+        href="https://github.com/teebrysiewicz"
+        title="My Github">
+          <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://twitter.com/tbrysiewicz"
+        title="My Twitter">
+          <i class="fab fa-twitter"></i>
+      </a>
+      </li>
     </ul>
   </div>
 </div>

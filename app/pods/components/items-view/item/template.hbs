@@ -1,0 +1,38 @@
+<div class="portfolio-item">
+  <h1>{{@model.title}}</h1>
+  <span>{{@model.tagline}}</span>
+  <small>{{moment-format @model.publishedAt "MM/DD/YYYY"}}</small>
+
+  <img class="main-image" src="{{@model.imageUrl}}">
+
+  <div class="body">
+    <h2>About</h2>
+    <p>{{@model.body}}</p>
+
+    <h3>Used:</h3>
+    <ul>
+      <li>Languages: {{@model.languages}}</li>
+      <li>Frameworks: {{@model.frameworks}}</li>
+      <li>Libraries: {{@model.libraries}}</li>
+      <li>Databases: {{@model.databases}}</li>
+    </ul>
+
+  <p>
+    Check it out with this
+    <a href={{@model.link}}>link</a>
+  </p>
+  </div>
+
+  {{#if @model.altImageUrlOne}}
+    <h4>Image Gallery</h4>
+    <div class="portfolio-image-gallery">
+      {{#if @model.altImageUrlOne}}
+        <img src="{{@model.altImageUrlOne}}">
+      {{/if}}
+      {{#if @model.altImageUrlTwo}}
+        <img src="{{@model.altImageUrlTwo}}">
+      {{/if}}
+    </div>
+  {{/if}}
+  <div class="bottom-line"></div>
+</div>

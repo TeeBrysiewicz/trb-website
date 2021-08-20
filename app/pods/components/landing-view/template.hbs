@@ -1,0 +1,15 @@
+<TrbContextual as |panel|>
+  <panel.navigation @isOpen={{this.isOpen}} @toggleMenu={{this.toggleMenu}} @sections={{this.sections}} />
+
+  <panel.content @isOpen={{{this.isOpen}}}>
+
+    <LandingView::About />
+    <LandingView::Experience />
+    <LandingView::Education />
+    <LandingView::Skills />
+    <LandingView::Portfolio />
+    <LandingView::Interests />
+    <LandingView::Contact />
+
+  </panel.content>
+</TrbContextual>

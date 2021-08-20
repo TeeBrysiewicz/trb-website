@@ -1,0 +1,27 @@
+<div
+  id="portfolio"
+  class="portfolio-container"
+>
+  <h1>Recent Portfolio</h1>
+
+  <LinkTo @route="items.index" class="full-link">
+    <i class="fas fa-arrow-right"></i>
+    Full Portfolio
+  </LinkTo>
+
+  <LandingView::Portfolio::Unit
+    @name="Ember JSONAPI Pagination"
+    @tagline="Open Source"
+    @image="https://i.imgur.com/a5CNlhl.png"
+    @description="A JSONAPI spec paginaton package for adding pagination buttons."
+    @code="https://www.npmjs.com/package/ember-jsonapi-pagination"
+  />
+
+  <LandingView::Portfolio::Unit
+    @name="This Site!"
+    @tagline="Ember"
+    @image="https://img.icons8.com/ios/452/here.png"
+    @description="Simple static ember application."
+    @code="https://github.com/teebrysiewicz"
+  />
+</div>

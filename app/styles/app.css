@@ -2,6 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import 'base/base';
 @import 'base/variables';
 
 @import 'components/navigation';
@@ -11,8 +12,10 @@
 @import 'components/education';
 @import 'components/skills';
 @import 'components/portfolio';
+@import 'components/portfolio-item';
 @import 'components/interests';
 @import 'components/contact';
+@import 'components/post';
 
 .ember-dark-mode-toggle {
   margin-top: 80px;

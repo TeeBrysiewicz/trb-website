@@ -1,0 +1,15 @@
+::selection {
+  background: var(--highlight);
+}
+::-moz-selection {
+  background: var(--highlight);
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url(/assets/fonts/montserrat-regular.ttf) format('truetype');
+}
+
+html {
+  font-family: "Montserrat-Regular";
+}

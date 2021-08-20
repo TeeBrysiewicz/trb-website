@@ -1,0 +1,9 @@
+<TrbContextual as |panel|>
+  <panel.navigation @isOpen={{this.isOpen}} @toggleMenu={{this.toggleMenu}} @model={{@model}} />
+
+  <panel.content @isOpen={{{this.isOpen}}}>
+
+    {{outlet}}
+
+  </panel.content>
+</TrbContextual>
