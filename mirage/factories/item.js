@@ -24,11 +24,9 @@ export default Factory.extend({
   },
 
   altImageUrlOne() {
-    return faker.image.imageUrl();
   },
 
   altImageUrlTwo() {
-    return faker.image.imageUrl();
   },
 
   languages() {
@@ -41,6 +39,9 @@ export default Factory.extend({
 
   libraries() {
     return faker.lorem.words();
+  },
+
+  databases() {
   },
 
   link() {

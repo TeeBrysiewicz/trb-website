@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   background-color: var(--background);
-  padding: 32px;
+  padding: 64px;
   margin: 0 auto;
   position: relative;
   color: var(--text-accent-dark);
@@ -27,7 +27,22 @@
     text-transform: uppercase;
   }
 
+  h3 {
+    margin-top: 15px;
+    color: var(--text-accent);
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
   a {
     color: var(--primary);
+  }
+
+  ul {
+    list-style-type: circle;
+
+    li {
+      margin-left: 16px;
+    }
   }
 }
