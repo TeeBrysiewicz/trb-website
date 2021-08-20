@@ -9,12 +9,10 @@
   top: 0;
   left: 0;
   right: 0;
-  transition: min-height 2s ease-out;
   z-index: 9999;
   line-height: 80px;
 
   @screen md {
-    transition: width 2s ease-out;
   }
 
   a, button {
@@ -114,6 +112,11 @@
     margin-right: 10px;
     font-size: 36px;
     color: var(--background);
+
+    button {
+      height: 60px;
+      width: 60px;
+    }
 
     @screen md {
       display: block;

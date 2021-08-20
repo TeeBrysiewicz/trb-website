@@ -62,6 +62,11 @@
         padding: 15px;
         margin: 16px;
 
+        &:hover {
+          color: var(--primary-light);
+          background-color: var(--primary);
+        }
+
         i:first-child {
           padding: 15px 15px 15px 16px;
         }
