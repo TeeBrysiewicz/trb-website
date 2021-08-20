@@ -13,6 +13,16 @@
   z-index: 9999;
   line-height: 80px;
 
+  @screen md {
+    transition: width 2s ease-out;
+  }
+
+  a, button {
+    &:hover {
+      color: var(--primary-light);
+    }
+  }
+
   &.close {
     @screen md {
       max-height: 100vh;
@@ -22,14 +32,13 @@
 
     .profile-picture {
       @screen md {
-        height: 5rem;
-        width: 5rem;
+        height: auto;
+        width: 80%;
       }
 
       img {
         @screen md {
-          height: 5rem;
-          width: 5rem;
+          height: auto;
           border: 5px solid var(--primary-light);
         }
       }
@@ -117,11 +126,11 @@
     }
   }
 
-
   .nav-links-container {
     display: none;
+    height: 100%;
     position: absolute;
-    top: 80px;
+    top: 0px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -131,13 +140,51 @@
     color: var(--background);
 
     @screen md {
+      height: 65%;
       display: block;
       position: relative;
       top: 0;
     }
 
+    @screen lg {
+      height: 68%;
+    }
+
     ul > li {
       text-transform: uppercase;
+    }
+
+    .header-links {
+      width: 100%;
+      height: 68%;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      overflow-y: scroll;
+      padding: 16px;
+      text-align: center;
+
+      @screen md {
+        top: 0;
+      }
+    }
+
+    .footer-links {
+      width: 100%;
+      height: 32%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      li:first-child {
+        border-top: 1px solid var(--primary-light);
+      }
+    }
+
+    .footer-icons {
+      color: var(--alt-white);
+      font-size: 36px;
+      padding: 4px;
     }
   }
 }

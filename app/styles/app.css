@@ -15,6 +15,7 @@
 @import 'components/portfolio-item';
 @import 'components/interests';
 @import 'components/contact';
+@import 'components/post';
 
 .ember-dark-mode-toggle {
   margin-top: 80px;

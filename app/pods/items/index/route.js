@@ -7,4 +7,8 @@ export default class ItemsIndexRoute extends Route {
   model(params) {
     return this.store.findAll('item');
   }
+
+  afterModel(model) {
+    this.transitionTo('items.index.show', model.firstObject.id);
+  }
 }

@@ -13,4 +13,7 @@ Router.map(function () {
       this.route('show', { path: '/:id' });
     });
   });
+  this.route('blog', function() {
+    this.route('post', { path: ':slug' });
+  });
 });

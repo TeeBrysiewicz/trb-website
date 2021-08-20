@@ -11,4 +11,5 @@ export default class ItemModel extends Model {
   @attr('string') languages;
   @attr('string') frameworks;
   @attr('string') libraries;
+  @attr('string') link;
 }

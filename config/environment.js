@@ -23,6 +23,11 @@ module.exports = function (environment) {
       // when it is created
     },
   };
+  ENV['ember-cli-markdown-resolver'] = {
+    folders: {
+      'blog': 'markdown'
+    }
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

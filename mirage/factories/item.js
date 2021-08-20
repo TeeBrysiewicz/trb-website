@@ -41,6 +41,10 @@ export default Factory.extend({
 
   libraries() {
     return faker.lorem.words();
+  },
+
+  link() {
+    return 'https://google.com'
   }
 
 });

@@ -1,16 +1,30 @@
 .portfolio-item {
-  width: 80%;
+  width: 90%;
   height: auto;
   background-color: var(--background);
-  padding: 32px;
-  margin: 40px auto;
+  padding: 18px;
+  margin: 100px auto;
   position: relative;
+
+  a {
+    color: var(--primary);
+    &:hover {
+      color: var(--primary-light);
+    }
+  }
+
+  @screen lg {
+    width: 80%;
+    margin: 40px auto;
+    padding: 32px;
+  }
 
   h1 {
     color: var(--text-accent-dark);
     font-size: 48px;
     font-weight: 600;
     text-transform: uppercase;
+    word-break: break-word;
   }
 
   span {
@@ -28,8 +42,12 @@
   }
 
   .body {
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
+
+    @screen lg {
+      width: 70%;
+    }
 
     h2 {
       margin-top: 30px;
@@ -54,9 +72,13 @@
       margin-top: 15px;
       margin-left: 16px;
       color: var(--text-accent);
-      font-size: 20px;
+      font-size: 14px;
       border-bottom: 1px solid var(--text-accent);
       padding-bottom: 30px;
+
+      @screen lg {
+        font-size: 20px;
+      }
 
       li {
         list-style-type: circle;
@@ -73,6 +95,7 @@
 
   .portfolio-image-gallery {
     margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
 
     img {
@@ -82,7 +105,7 @@
 
   .bottom-line {
     width: 70%;
-    margin: 30px auto;
+    margin: 0 auto;
     height: 1px;
     border-bottom: 1px solid var(--text-accent);
     padding-bottom: 30px;

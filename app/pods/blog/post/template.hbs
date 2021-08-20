@@ -1,0 +1,12 @@
+{{page-title model.attributes.title}}
+
+<div class="post-container">
+  <h1>{{model.attributes.title}}</h1>
+
+  <span class="post__meta">
+    <span>{{model.attributes.date}}</span>
+    <span>{{model.attributes.author}}</span>
+  </span>
+
+  {{markdown-to-html model.content}}
+</div>

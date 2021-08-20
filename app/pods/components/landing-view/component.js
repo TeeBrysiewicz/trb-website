@@ -5,7 +5,7 @@ import { action } from '@ember/object';
 export default class LandingViewComponent extends Component {
   sections = ['about', 'experience', 'education', 'skills', 'portfolio', 'interests', 'contact'];
 
-  @tracked isOpen = true;
+  @tracked isOpen = false;
 
   @action
   toggleMenu() {
