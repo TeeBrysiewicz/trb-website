@@ -29,22 +29,6 @@ module.exports = function (environment) {
     }
   };
 
-  ENV['metricsAdapters'] = [
-    {
-      name: 'GoogleAnalytics',
-      environments: ['production'],
-      config: {
-        id: process.env.GA,
-
-        // Use `analytics_debug.js` in development
-        debug: environment === 'development',
-
-        // Use verbose tracing of GA events
-        trace: environment === 'development',
-      }
-    }
-  ];
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
