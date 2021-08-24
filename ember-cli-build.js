@@ -1,6 +1,9 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {

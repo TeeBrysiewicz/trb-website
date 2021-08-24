@@ -4,7 +4,7 @@
   </div>
 
   <div class="nav-icon">
-    <button {{on "click" @toggleMenu}}>
+    <button {{on "click" @toggleMenu}} tabindex="0" aria-label="{{if @isOpen "Close Navigation" "Open Navigation"}}">
       {{#if (media "isMobile")}}
         <i class="fas fa-bars"></i>
       {{else}}
@@ -29,6 +29,7 @@
             {{/if}}
             {{#if model.attributes.title}}
               <LinkTo
+                aria-label="{{model.attributes.title}} Blog Post"
                 @route="blog.post"
                 @model={{model.attributes.slug}}
                 {{on "click" @toggleMenu}}
@@ -41,7 +42,10 @@
       {{else}}
         {{#each @sections as |section|}}
           <li>
-            <a href="#{{section}}" {{on "click" @toggleMenu}}>
+            <a
+              href="#{{section}}"
+              {{on "click" @toggleMenu}}
+            >
               {{section}}
             </a>
           </li>
@@ -51,34 +55,46 @@
     <ul class="footer-links">
       <li></li>
       <li>
-        <LinkTo @route="landing" {{on "click" @toggleMenu}}>
+        <LinkTo
+          aria-label="Home"
+          @route="landing"
+          {{on "click" @toggleMenu}}
+        >
           Home
         </LinkTo>
       </li>
       <li>
-        <LinkTo @route="items.index" {{on "click" @toggleMenu}}>
+        <LinkTo
+          aria-label="Tobias's Portfolio"
+          @route="items.index"
+          {{on "click" @toggleMenu}}
+        >
           Portfolio
         </LinkTo>
       </li>
       <li>
-        <LinkTo @route="blog" {{on "click" @toggleMenu}}>
+        <LinkTo
+          aria-label="Tobias's Blog"
+          @route="blog"
+          {{on "click" @toggleMenu}}
+        >
           Blog
         </LinkTo>
       </li>
       <li class="footer-icons">
         <a
           href="https://linkedin.com/in/teebrysiewicz"
-          title="My Linkedin">
+          title="Tobias's Linkedin">
             <i class="fab fa-linkedin-in"></i>
         </a>
       <a
         href="https://github.com/teebrysiewicz"
-        title="My Github">
+        title="Tobias's Github">
           <i class="fab fa-github"></i>
       </a>
       <a
         href="https://twitter.com/tbrysiewicz"
-        title="My Twitter">
+        title="Tobias's Twitter">
           <i class="fab fa-twitter"></i>
       </a>
       </li>

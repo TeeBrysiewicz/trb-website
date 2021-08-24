@@ -22,7 +22,7 @@ export default function(server) {
     languages: 'Javascript',
     frameworks: 'Ember',
     libraries: 'ember-cli-markdown-resolver, ember-dark-mode, postcss and tailwind to name a few',
-    link: 'https://github.com/teebrysiewicz'
+    link: 'https://github.com/TeeBrysiewicz/trb-website'
   });
 
   server.create('item', {
@@ -35,7 +35,7 @@ export default function(server) {
     frameworks: 'Cocoa Touch',
     libraries: 'AWS',
     databases: 'Mongo DB',
-    link: 'insert link'
+    link: 'https://apprecs.com/ios/1121126488/lite-app-simple-personal-finance-education-budget-money'
   });
 
   server.create('item', {
@@ -50,7 +50,7 @@ export default function(server) {
     frameworks: 'Cocoa Touch',
     libraries: 'Open Weather Map API',
     databases: 'Core Data',
-    link: 'insert link'
+    link: 'https://github.com/TeeBrysiewicz/BigCityWeather'
   });
 
   server.create('item', {
@@ -78,7 +78,7 @@ export default function(server) {
     frameworks: 'Cocoa Touch',
     libraries: 'Clover, Parse',
     databases: 'NodeChef',
-    link: 'insert link'
+    link: 'https://yournorthcounty.com/tasting-room-del-mar/'
   });
 
   server.create('item', {
@@ -93,7 +93,7 @@ export default function(server) {
     frameworks: 'none',
     libraries: 'Bootstrap',
     databases: 'none',
-    link: 'insert link'
+    link: 'https://hdcw.firebaseapp.com/'
   });
 
   server.create('item', {
@@ -107,7 +107,7 @@ export default function(server) {
     frameworks: 'Ruby on Rails',
     libraries: 'jQuery',
     databases: 'PostgreSQL',
-    link: 'insert link'
+    link: 'no link available'
   });
 
 }
