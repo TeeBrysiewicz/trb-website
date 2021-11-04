@@ -1,0 +1,15 @@
+.notfound {
+  width: 100vw;
+  height: 100vh;
+  color: var(--primary);
+
+  text-align: center;
+  padding: 13%;
+  /*margin-top: 300px;*/
+  /*vertical-align: middle;*/
+  /*margin: 5% 10%;*/
+
+  h1 {
+    margin-top: 100px;
+  }
+}
