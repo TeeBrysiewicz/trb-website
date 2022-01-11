@@ -14,46 +14,6 @@ export default function(server) {
   });
 
   server.create('item', {
-    title: 'This Site',
-    tagline: "Ember",
-    body: 'Ember App',
-    publishedAt: 'August 19 2021',
-    imageUrl: 'assets/this-site.png',
-    languages: 'Javascript',
-    frameworks: 'Ember',
-    libraries: 'ember-cli-markdown-resolver, ember-dark-mode, postcss and tailwind to name a few',
-    link: 'https://github.com/TeeBrysiewicz/trb-website'
-  });
-
-  server.create('item', {
-    title: 'Lite App',
-    tagline: 'a native iOS application',
-    body: 'Lite is a financial education iOS application aimed at helping individuals become financially fit. I was hired as a freelancer to help redesign the UX/UI first and foremost. We then moved to App Store deployment requirements. We then worked on adding several new features and functionality.',
-    publishedAt: 'May 5 2016',
-    imageUrl: 'assets/lite-logo.png',
-    languages: 'Swift 2',
-    frameworks: 'Cocoa Touch',
-    libraries: 'AWS',
-    databases: 'Mongo DB',
-    link: 'https://apprecs.com/ios/1121126488/lite-app-simple-personal-finance-education-budget-money'
-  });
-
-  server.create('item', {
-    title: 'Big City Weather',
-    tagline: 'a native iOS application',
-    body: 'Big City Weather is a simple iOS application that ties in with Open Weather API to show a five day forecast per each of the ten big US cities.',
-    publishedAt: 'June 12 2016',
-    imageUrl: 'assets/bcw-logo.jpg',
-    altImageUrlOne: 'assets/bcw-1.png',
-    altImageUrlTwo: 'assets/bcw-2.png',
-    languages: 'Swift 2',
-    frameworks: 'Cocoa Touch',
-    libraries: 'Open Weather Map API',
-    databases: 'Core Data',
-    link: 'https://github.com/TeeBrysiewicz/BigCityWeather'
-  });
-
-  server.create('item', {
     title: 'All Things Swift',
     tagline: 'a monthly Swift meetup',
     body: 'All Things Swift meets once a month in both Chicago and San Diego. San Diego\'s event is hosted by Andrew Wilhelm and Yosef Rosenberg, while Chicago\'s event is hosted by Feagal Walsh and Tobias Brysiewicz. Both meet ups are currently following the "Lightening Talk" format of 5-10 minute talks. This is not only a meetup, but also includes a static site with video and blog content from each meetup.',
@@ -94,6 +54,46 @@ export default function(server) {
     libraries: 'Bootstrap',
     databases: 'none',
     link: 'https://hdcw.firebaseapp.com/'
+  });
+
+  server.create('item', {
+    title: 'This Site',
+    tagline: "Ember",
+    body: 'Ember App',
+    publishedAt: 'August 19 2021',
+    imageUrl: 'assets/this-site.png',
+    languages: 'Javascript',
+    frameworks: 'Ember',
+    libraries: 'ember-cli-markdown-resolver, ember-dark-mode, postcss and tailwind to name a few',
+    link: 'https://github.com/TeeBrysiewicz/trb-website'
+  });
+
+  server.create('item', {
+    title: 'Lite App',
+    tagline: 'a native iOS application',
+    body: 'Lite is a financial education iOS application aimed at helping individuals become financially fit. I was hired as a freelancer to help redesign the UX/UI first and foremost. We then moved to App Store deployment requirements. We then worked on adding several new features and functionality.',
+    publishedAt: 'May 5 2016',
+    imageUrl: 'assets/lite-logo.png',
+    languages: 'Swift 2',
+    frameworks: 'Cocoa Touch',
+    libraries: 'AWS',
+    databases: 'Mongo DB',
+    link: 'https://apprecs.com/ios/1121126488/lite-app-simple-personal-finance-education-budget-money'
+  });
+
+  server.create('item', {
+    title: 'Big City Weather',
+    tagline: 'a native iOS application',
+    body: 'Big City Weather is a simple iOS application that ties in with Open Weather API to show a five day forecast per each of the ten big US cities.',
+    publishedAt: 'June 12 2016',
+    imageUrl: 'assets/bcw-logo.jpg',
+    altImageUrlOne: 'assets/bcw-1.png',
+    altImageUrlTwo: 'assets/bcw-2.png',
+    languages: 'Swift 2',
+    frameworks: 'Cocoa Touch',
+    libraries: 'Open Weather Map API',
+    databases: 'Core Data',
+    link: 'https://github.com/TeeBrysiewicz/BigCityWeather'
   });
 
   server.create('item', {
