@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
-export default class BlogRoute extends Route {
+export default class WrittingsRoute extends Route {
   @service markdownResolver;
 
   async model() {
@@ -14,6 +14,6 @@ export default class BlogRoute extends Route {
   }
 
   afterModel(model) {
-    this.transitionTo('blog.post', model.firstObject.attributes.slug);
+    this.transitionTo('writtings.post', model.firstObject.attributes.slug);
   }
 }

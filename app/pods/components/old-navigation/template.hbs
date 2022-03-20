@@ -1,0 +1,103 @@
+<div class="navigation-container {{if @isOpen "open" "close"}}">
+  <div class="profile-picture">
+    <img src="https://i.ibb.co/2SpCrmw/54729647-10156185922318170-7721612515372695552-n.jpg">
+  </div>
+
+  <div class="nav-icon">
+    <button {{on "click" @toggleMenu}} tabindex="0" aria-label="{{if @isOpen "Close Navigation" "Open Navigation"}}">
+      {{#if (media "isMobile")}}
+        <i class="fas fa-bars"></i>
+      {{else}}
+        <i class="fas {{if @isOpen "fa-chevron-right" "fa-chevron-left"}} "></i>
+      {{/if}}
+    </button>
+  </div>
+
+  <div class="nav-links-container">
+    <ul class="header-links">
+      {{#if @model}}
+        {{#each @model as |model|}}
+          <li>
+            {{#if model.title}}
+              <LinkTo
+                @route="items.index.show"
+                @model={{model.id}}
+                {{on "click" @toggleMenu}}
+              >
+                  {{model.title}}
+              </LinkTo>
+            {{/if}}
+            {{#if model.attributes.title}}
+              <LinkTo
+                aria-label="{{model.attributes.title}} Blog Post"
+                @route="blog.post"
+                @model={{model.attributes.slug}}
+                {{on "click" @toggleMenu}}
+              >
+                {{model.attributes.title}}
+              </LinkTo>
+            {{/if}}
+          </li>
+        {{/each}}
+      {{else}}
+        {{#each @sections as |section|}}
+          <li>
+            <a
+              href="#{{section}}"
+              {{on "click" @toggleMenu}}
+            >
+              {{section}}
+            </a>
+          </li>
+        {{/each}}
+      {{/if}}
+    </ul>
+    <ul class="footer-links">
+      <li></li>
+      <li>
+        <LinkTo
+          aria-label="Home"
+          @route="landing"
+          {{on "click" @toggleMenu}}
+        >
+          Home
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo
+          aria-label="Tobias's Portfolio"
+          @route="items.index"
+          {{on "click" @toggleMenu}}
+        >
+          Portfolio
+        </LinkTo>
+      </li>
+      <li>
+        <LinkTo
+          aria-label="Tobias's Blog"
+          @route="blog"
+          {{on "click" @toggleMenu}}
+        >
+          Blog
+        </LinkTo>
+      </li>
+      <li class="footer-icons">
+        <a
+          href="https://linkedin.com/in/teebrysiewicz"
+          title="Tobias's Linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+      <a
+        href="https://github.com/teebrysiewicz"
+        title="Tobias's Github">
+          <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://twitter.com/tbrysiewicz"
+        title="Tobias's Twitter">
+          <i class="fab fa-twitter"></i>
+      </a>
+      </li>
+    </ul>
+  </div>
+</div>

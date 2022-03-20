@@ -5,7 +5,10 @@
 @import 'base/base';
 @import 'base/variables';
 
-@import 'components/notfound';
+@import 'tbztheme/tbz-base';
+/*@import 'tbztheme/holo';*/
+
+/*@import 'components/notfound';
 @import 'components/navigation';
 @import 'components/content';
 @import 'components/about';
@@ -16,7 +19,7 @@
 @import 'components/portfolio-item';
 @import 'components/interests';
 @import 'components/contact';
-@import 'components/post';
+@import 'components/post';*/
 
 .ember-dark-mode-toggle {
   margin-top: 80px;

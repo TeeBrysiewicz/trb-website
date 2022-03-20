@@ -1,0 +1,15 @@
+<div class="tbz-writtings-menu border-gradient">
+  <ul>
+    {{#each @model as |model|}}
+      <li>
+        <LinkTo
+          aria-label="{{model.attributes.title}} Writtings Post"
+          @route="writtings.post"
+          @model={{model.attributes.slug}}
+        >
+          {{model.attributes.title}}
+        </LinkTo>
+      </li>
+    {{/each}}
+  </ul>
+</div>

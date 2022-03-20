@@ -1,0 +1,20 @@
+{{page-title "Writtings"}}
+
+<div class="tbz-container">
+  <div class="tbz-content-container">
+    <Navigation @section="writtings"/>
+
+    <div class="tbz-content">
+
+      <WrittingsMenu @model={{@model}} />
+
+      <div class="tbz-writtings-content border-gradient">
+        {{outlet}}
+      </div>
+
+    </div>
+  </div>
+  <div class="tbz-copyright">@ 2022 TB</div>
+
+
+</div>

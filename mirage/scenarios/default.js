@@ -1,6 +1,18 @@
 export default function(server) {
   // server.createList('item', 5);
 
+  // server.create('item', {
+  //   title: 'Work Summary',
+  //   tagline: 'Paid Experience',
+  //   body: 'I obtained an internship right after LEARN Bootcamp, so most of the meaningful work I have done has been paid work. This is a summary of my collective work experience.',
+  //   publishedAt: "February 22 2022",
+  //   imageUrl: 'assets/ember-jsonapi-pagination.png',
+  //   languages: 'Work In Progress',
+  //   frameworks: 'WIP',
+  //   libraries: 'JSON API Serializer',
+  //   link: 'https://www.npmjs.com/package/ember-jsonapi-pagination',
+  // });
+
   server.create('item', {
     title: 'Ember JSON API Pagination Package',
     tagline: 'Open Source',
