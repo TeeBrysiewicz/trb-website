@@ -22,14 +22,12 @@
 
 .tbz-post-container {
   width: 100%;
-  height: 400px;
-  /*max-width: 960px;*/
+  height: auto;
   margin: 0 auto;
-  padding: 30px;
+  padding: 3.75rem;
   padding-bottom: 100px;
   background: #fff;
   display: block;
-  /*display: flex;*/
   justify-content: center;
   align-items: center;
 }
@@ -43,7 +41,7 @@
 }
 
 .border-gradient {
-  border: 1px solid;
+  /*border: 1px solid;*/
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
   animation: border 15s ease infinite;
@@ -87,6 +85,7 @@ body {
 }
 
 .tbz-container {
+  position: fixed;
   width: 100%;
   height: 100vh;
   margin: auto;
@@ -102,18 +101,25 @@ body {
 
 
 .tbz-content-container {
+  position: relative;
   width: 100%;
-  height: 100%;
-  margin: 0 auto;
+  height: 90vh;
+  /*overflow: scroll;*/
+  margin: auto;
   background-color: white;
 }
 
 .tbz-navigation {
+  position: sticky;
   width: 100%;
-  padding: 1.6rem;
+  background: #ffffff;
+  z-index: 99;
+  padding: 1.5rem;
   display: flex;
-  line-height: 48px;
+  /*line-height: 3.5rem;*/
+  line-height: 6vh;
   vertical-align: middle;
+  border-bottom: 1px solid;
 }
 
 .tbz-navigation ul {
@@ -149,13 +155,20 @@ body {
 /* Writings */
 .tbz-content {
   display: flex;
-  margin: 0 auto;
+  position: relative;
   width: 100%;
+  height: 84vh;
+
 }
 
 .tbz-writtings-menu {
-  width: 20%;
+  position: sticky;
+  background-color: white;
+  height: 80vh;
   padding: 28px;
+  flex-basis: 20%;
+  overflow: scroll;
+  border-right: 1px solid;
 }
 
 .tbz-writtings-menu li {
@@ -170,10 +183,9 @@ body {
 }
 
 .tbz-writtings-content {
-  width: 100%;
-  height: 85vh;
-  padding: 20px;
+  flex-basis: 80%;
   overflow: scroll;
+  height: 80vh;
 }
 
 /* Contact */
@@ -187,14 +199,21 @@ body {
 .tbz-contact-container {
   display: inline-block;
   width: 100%;
-  height: auto;
+  height: 100%;
   font-size: 18px;
   text-align: center;
+  overflow: hidden;
+}
+
+.contact-form {
+  width: 80%;
+  margin: 0 auto;
+  /*display: flex;*/
 }
 
 .tbz-contact-container label {
   display: block;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
@@ -205,24 +224,32 @@ body {
 }
 
 .tbz-contact-container input {
-  width: 40%;
+  width: 100%;
   margin: 0 auto;
   padding: 8px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  animation: border 15s ease infinite;
 }
 
 .tbz-contact-container textarea {
-  width: 40%;
-  height: 400px;
+  width: 100%;
+  height: 20rem;
   margin: 0 auto;
   padding: 8px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  animation: border 15s ease infinite;
 }
 
 .tbz-button-container button{
   color: white;
-  padding: 10px 20px;
-  font-size: 36px;
-  border-radius: 12px;
-  text-align: right;
+  padding: 6px 12px;
+  font-size: 24px;
+  border-radius: 8px;
+  /*text-align: right;*/
 }
 
 
