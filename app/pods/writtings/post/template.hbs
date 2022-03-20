@@ -1,12 +1,12 @@
 {{page-title model.attributes.title}}
 
-<div class="container">
-  <h1 class="msg">{{model.attributes.title}}</h1>
+<div class="tbz-post-container">
+  <h1 class="tbz-post-header tbz-header">{{model.attributes.title}}</h1>
 
-  <span class="post__meta">
+  <div class="post__meta tbz-post-info">
     <span>{{model.attributes.date}}</span>
     <span>{{model.attributes.author}}</span>
-  </span>
+  </div>
 
   {{markdown-to-html model.content}}
 </div>

@@ -1,8 +1,8 @@
 ::selection {
-  background: var(--highlight);
+  background-color: var(--highlight);
 }
 ::-moz-selection {
-  background: var(--highlight);
+  background-color: var(--highlight);
 }
 
 @font-face {
@@ -10,6 +10,18 @@
   src: url(/assets/fonts/montserrat-regular.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url(/assets/fonts/montserrat-bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumBrushScript-Regular';
+  src: url(/assets/fonts/NanumBrushScript-Regular.ttf) format('truetype');
+}
 html {
+  font-family: "Montserrat-Regular";
+}
+body {
   font-family: "Montserrat-Regular";
 }
