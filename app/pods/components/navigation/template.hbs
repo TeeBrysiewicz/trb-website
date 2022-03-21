@@ -5,22 +5,56 @@
         @route="writtings"
         class="tbz-menu-link"
       >
+        {{#if (media "isMobile")}}
+          <i class="fas fa-pen"></i>
+        {{else}}
           Writtings
+        {{/if}}
       </LinkTo>
+    </li>
+    <li>
       <LinkTo
         @route="about"
         class="tbz-menu-link"
       >
+        {{#if (media "isMobile")}}
+          <i class="fas fa-user-alt"></i>
+        {{else}}
           About
+        {{/if}}
       </LinkTo>
+    </li>
+    {{#if (media "isMobile")}}
+      <li>
+        <a href="#" class="tbz tbz-navigation-mobile-icon">
+          TB
+        </a>
+      </li>
+    {{/if}}
+    <li>
       <LinkTo
         @route="contact"
         class="tbz-menu-link"
       >
+        {{#if (media "isMobile")}}
+          <i class="fas fa-phone"></i>
+        {{else}}
           Contact
+        {{/if}}
       </LinkTo>
     </li>
+    {{#if (media "isMobile")}}
+      <li>
+        <a href="#" class="tbz-menu-link">
+          <i class="fas fa-bars"></i>
+        </a>
+      </li>
+    {{/if}}
   </ul>
 
-  <span class="tbz tbz-font-color">TB</span>
+  {{#if (media "isMobile")}}
+
+  {{else}}
+    <span class="tbz tbz-font-color">TB</span>
+  {{/if}}
 </div>

@@ -1,8 +1,14 @@
 {{page-title "Contact"}}
 
+{{#if (media "isMobile")}}
+  <Navigation />
+{{/if}}
+
 <div class="tbz-container">
   <div class="tbz-content-container">
-    <Navigation />
+    {{#unless (media "isMobile")}}
+      <Navigation />
+    {{/unless}}
 
     <div class="tbz-content">
 
