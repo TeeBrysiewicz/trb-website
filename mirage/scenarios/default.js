@@ -13,11 +13,15 @@ export default function(server) {
   //   link: 'https://www.npmjs.com/package/ember-jsonapi-pagination',
   // });
 
+// categories: experience community freelance other-projects
+
   server.create('item', {
+    category: 'community + other-projects',
     title: 'Ember JSON API Pagination Package',
     tagline: 'Open Source',
     body: 'A JSONAPI spec paginaton package for adding pagination buttons.',
     publishedAt: "August 12 2021",
+    duration: "8/12/21",
     imageUrl: 'assets/ember-jsonapi-pagination.png',
     languages: 'Javascript',
     frameworks: 'Ember',
@@ -26,10 +30,12 @@ export default function(server) {
   });
 
   server.create('item', {
-    title: 'All Things Swift',
+    category: 'community',
+    title: 'All Things Swift: San Diego',
     tagline: 'a monthly Swift meetup',
-    body: 'All Things Swift meets once a month in both Chicago and San Diego. San Diego\'s event is hosted by Andrew Wilhelm and Yosef Rosenberg, while Chicago\'s event is hosted by Feagal Walsh and Tobias Brysiewicz. Both meet ups are currently following the "Lightening Talk" format of 5-10 minute talks. This is not only a meetup, but also includes a static site with video and blog content from each meetup.',
+    body: 'All Things Swift was started a bit after the release of Swift 2.0. Most formats were lightning talks. (5-15min)',
     publishedAt: 'March 21 2016',
+    duration: '3/21/16',
     imageUrl: 'assets/ats-logo.png',
     languages: 'Javascript, Ruby',
     frameworks: 'none',
@@ -39,10 +45,27 @@ export default function(server) {
   });
 
   server.create('item', {
+    category: 'community',
+    title: 'All Things Swift: Chicago',
+    tagline: 'a monthly Swift meetup',
+    body: 'All Things Swift: Chicago was started the following summer in Chicago. (15-30min talks)',
+    publishedAt: 'July 21 2016',
+    duration: '7/21/16',
+    imageUrl: 'assets/ats-logo.png',
+    languages: 'Javascript, Ruby',
+    frameworks: 'none',
+    libraries: 'Jekyll',
+    databases: 'none',
+    link: 'https://allthingsswift.org'
+  });
+
+  server.create('item', {
+    category: 'experience',
     title: 'Tasting Room Del Mar',
     tagline: 'a native iOS application',
     body: 'Tasting Room Del Mar is a restaurant in Del Mar, CA. The owners wanted to do something different with their business and offer more to their customers. Working together we created a mobile app that allows customers to intelligently browse the expansive wine, food and beer lists, place inhouse & takeaway orders directly from their phones, and checkout through applepay or a cc. This set the foundation for us to build a brand new resturant experience with the goal of creating a more immersive customer experience.',
     publishedAt: 'May 21 2016',
+    duration: '5/21/16',
     imageUrl: 'assets/trdm-app-1.jpg',
     altImageUrlOne: 'assets/trdm-app-4.png',
     altImageUrlTwo: 'assets/trdm-app-3.jpg',
@@ -54,10 +77,12 @@ export default function(server) {
   });
 
   server.create('item', {
+    category: 'freelance + community',
     title: 'Honey Drops For Children Of The World',
     tagline: 'a static website',
     body: 'Since 2010, HDCW has visited cities around the US, Guatemala, Dominican Republic, and Madagascar dedicating their time and effort to assisting children and families with new homes and schools. HDCW has worked in conjunction with other organizations to achieve similar goals. HDCW are re-positioning themselves in becoming an influential voice for developing educational programs and building new efficient schools.',
     publishedAt: 'November 5 2015',
+    duration: '11/5/15',
     imageUrl: 'assets/hdcw-1.png',
     altImageUrlOne: 'assets/hdcw-5.jpg',
     altImageUrlTwo: 'assets/hdcw-6.jpg',
@@ -69,10 +94,12 @@ export default function(server) {
   });
 
   server.create('item', {
+    category: 'other-projects',
     title: 'This Site',
     tagline: "Ember",
     body: 'Ember App',
     publishedAt: 'August 19 2021',
+    duration: '8/19/21',
     imageUrl: 'assets/this-site.png',
     languages: 'Javascript',
     frameworks: 'Ember',
@@ -81,10 +108,12 @@ export default function(server) {
   });
 
   server.create('item', {
+    category: 'freelance',
     title: 'Lite App',
     tagline: 'a native iOS application',
     body: 'Lite is a financial education iOS application aimed at helping individuals become financially fit. I was hired as a freelancer to help redesign the UX/UI first and foremost. We then moved to App Store deployment requirements. We then worked on adding several new features and functionality.',
     publishedAt: 'May 5 2016',
+    duration: '5/5/16',
     imageUrl: 'assets/lite-logo.png',
     languages: 'Swift 2',
     frameworks: 'Cocoa Touch',
@@ -94,10 +123,12 @@ export default function(server) {
   });
 
   server.create('item', {
+    category: 'other-projects',
     title: 'Big City Weather',
     tagline: 'a native iOS application',
     body: 'Big City Weather is a simple iOS application that ties in with Open Weather API to show a five day forecast per each of the ten big US cities.',
     publishedAt: 'June 12 2016',
+    duration: '6/12/16',
     imageUrl: 'assets/bcw-logo.jpg',
     altImageUrlOne: 'assets/bcw-1.png',
     altImageUrlTwo: 'assets/bcw-2.png',
@@ -109,10 +140,12 @@ export default function(server) {
   });
 
   server.create('item', {
+    category: 'other-projects',
     title: 'Fun Finder',
     tagline: 'a ruby on rails web application',
     body: 'This was my team’s final project for LEARN Bootcamp. It is an event scheduler and finder for people looking to go out and socialize.',
     publishedAt: 'November 23 2015',
+    duration: '11/23/15',
     imageUrl: 'assets/ff-1.png',
     altImageUrlOne: 'assets/ff-2.png',
     languages: 'Ruby',
@@ -122,16 +155,18 @@ export default function(server) {
     link: 'no link available'
   });
 
+  server.create('item', {
+    category: 'experience',
+    title: 'Apprentice Engineer',
+    tagline: 'Ember agency',
+    body: 'Working on Ember/Elixir applications and enterprise ember front ends.',
+    duration: 'January 2020 - September 2021',
+    imageUrl: 'assets/ff-1.png',
+    altImageUrlOne: 'assets/ff-2.png',
+    languages: 'Javascript Elixir',
+    frameworks: 'Ember Phoenix',
+    libraries: 'ember-josnapi-pagination',
+    databases: 'PostgreSQL',
+    link: 'no link available'
+  });
 }
-
-  // server.create('item', {
-  //   title:
-  //   tagline:
-  //   body:
-  //   publishedAt:
-  //   imageUrl:
-  //   languages:
-  //   frameworks:
-  //   libraries:
-  //   link:
-  // });

@@ -11,7 +11,7 @@
 
 .tbz-header {
   font-family: 'Montserrat-Bold';
-  font-size: 90px;
+  font-size: 5.625rem;
   font-weight: bold;
   background: linear-gradient(to right, #7927b2, #fb3182);
   -webkit-background-clip: text;
@@ -105,6 +105,7 @@ body {
   width: 100%;
   height: 90vh;
   /*overflow: scroll;*/
+  overflow: hidden;
   margin: auto;
   background-color: white;
 }
@@ -138,6 +139,12 @@ body {
 }
 
 .tbz-menu-link.active {
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+
+
   border-bottom: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
@@ -176,6 +183,11 @@ body {
 }
 
 .tbz-writtings-menu a.active {
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+
   border-bottom: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
@@ -208,7 +220,6 @@ body {
 .contact-form {
   width: 80%;
   margin: 0 auto;
-  /*display: flex;*/
 }
 
 .tbz-contact-container label {
@@ -249,7 +260,166 @@ body {
   padding: 6px 12px;
   font-size: 24px;
   border-radius: 8px;
-  /*text-align: right;*/
+}
+
+/* About */
+.tbz-about-content {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.tbz-about-header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 5.625rem;
+}
+
+.tbz-about-header-head {
+  flex-basis: 80%;
+  line-height: 8.75rem;
+  vertical-align: middle;
+}
+
+.tbz-about-header-head span {
+  display: block;
+}
+
+.tbz-about-header-links {
+  flex-basis: 20%;
+  line-height: 8.75rem;
+  vertical-align: middle;
+  display: flex;
+  margin: auto;
+}
+
+.tbz-about-header-links a {
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 8px;
+}
+
+.tbz-about-header-links a:hover {
+  background: linear-gradient(to right, #000, #CCC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.tbz-about-summary-container {
+  width: 80%;
+  display: flex;
+  padding: 0 5.625rem;
+  margin: 0 auto 5rem auto;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  animation: border 15s ease infinite;
+}
+
+.tbz-isotope-container {
+  width: 100%;
+  height: 400px;
+}
+
+/* Isotope Filtering */
+.tbz-isotope-filters {
+  padding: 8px;
+  width: 100%;
+  line-height: 32px;
+  vertical-align: middle;
+  border: 1px solid red;
+  display: inline-block;
+  text-align: right;
+}
+
+.tbz-isotope-filters li {
+  display: inline;
+}
+
+.tbz-isotope-filters a {
+  padding: 8px;
+  line-height: 24px;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  animation: border 15s ease infinite;
+  background-color: white;
+}
+
+.tbz-isotope-elm-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.isotope_selector {
+  flex: 1;
+  flex-basis: 20%;
+  width: 25%;
+  width: 20%;
+  height: 250px;
+  color: white;
+  background: #3b3b3b;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  animation: border 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.isotope_selector img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.isotope_selector:hover .item-overlay {
+  opacity: 1;
 }
 
 
+.item-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(59, 59, 59, .5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.item-overlay h1 {
+  flex: 1;
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.item-overlay span {
+  flex: 1;
+  color: white;
+  position: relative;
+  bottom: 0;
+}

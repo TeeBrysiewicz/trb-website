@@ -3,6 +3,10 @@ import faker from 'faker';
 
 export default Factory.extend({
 
+  category() {
+    return faker.lorem.words();
+  },
+
   title() {
     return faker.lorem.words();
   },
@@ -16,6 +20,10 @@ export default Factory.extend({
   },
 
   publishedAt() {
+    return faker.date.past();
+  },
+
+  duration() {
     return faker.date.past();
   },
 
