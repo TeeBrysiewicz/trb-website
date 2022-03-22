@@ -1,7 +1,10 @@
 {{page-title "Contact"}}
 
 {{#if (media "isMobile")}}
-  <Navigation />
+  <Navigation
+    @showMenu={{false}}
+    @redirectWrittings={{true}}
+  />
 {{/if}}
 
 <div class="tbz-container">
@@ -11,6 +14,14 @@
     {{/unless}}
 
     <div class="tbz-content">
+
+      {{#if (media "isMobile")}}
+        <WrittingsMenu
+          @model={{@model}}
+          @showMenu={{this.showMenu}}
+          @openMenu={{this.openMenu}}
+        />
+      {{/if}}
 
       <div
         id="contact"

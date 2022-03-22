@@ -3,7 +3,7 @@
     <li>
       <LinkTo
         @route="writtings"
-        class="tbz-menu-link"
+        class="tbz-menu-link {{if @writtings 'writtings-nav-link'}}"
       >
         {{#if (media "isMobile")}}
           <i class="fas fa-pen"></i>
@@ -24,13 +24,6 @@
         {{/if}}
       </LinkTo>
     </li>
-    {{#if (media "isMobile")}}
-      <li>
-        <a href="#" class="tbz tbz-navigation-mobile-icon">
-          TB
-        </a>
-      </li>
-    {{/if}}
     <li>
       <LinkTo
         @route="contact"
@@ -43,18 +36,40 @@
         {{/if}}
       </LinkTo>
     </li>
-    {{#if (media "isMobile")}}
-      <li>
-        <a href="#" class="tbz-menu-link">
-          <i class="fas fa-bars"></i>
-        </a>
-      </li>
-    {{/if}}
+{{!-- Ham --}}
+      {{#if (media "isMobile")}}
+
+        {{#if this.redirectWrittings}}
+          <li>
+            <LinkTo @route="writtings" class="tbz-menu-link">
+              <i class="fas fa-bars"></i>
+            </LinkTo>
+          </li>
+        {{else}}
+
+          {{#if @showMenu}}
+            <li>
+              <a href="#" class="tbz-menu-link {{if @showMenu "tbz-font-color"}}"
+                {{on "click" @openMenu}}
+              >
+                <i class="fas fa-times"></i>
+              </a>
+            </li>
+          {{else}}
+            <li>
+              <a href="#" class="tbz-menu-link"
+                {{on "click" @openMenu}}
+              >
+                <i class="fas fa-bars"></i>
+              </a>
+            </li>
+          {{/if}}
+        {{/if}}
+
+      {{/if}}
   </ul>
 
-  {{#if (media "isMobile")}}
-
-  {{else}}
+  {{#unless (media "isMobile")}}
     <span class="tbz tbz-font-color">TB</span>
-  {{/if}}
+  {{/unless}}
 </div>

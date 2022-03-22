@@ -1,7 +1,10 @@
 {{page-title "About"}}
 
 {{#if (media "isMobile")}}
-  <Navigation />
+  <Navigation
+    @showMenu={{false}}
+    @redirectWrittings={{true}}
+  />
 {{/if}}
 
 <div class="tbz-container">
@@ -14,11 +17,11 @@
       <div class="tbz-about-header-container">
 
         <div class="tbz-about-header-head">
-          <span class="tbz-header">Tobias</span>
-          <span class="tbz-header">Brysiewicz</span>
+          <div class="tbz-header first">Tobias</div>
+          <div class="tbz-header last">Brysiewicz</div>
         </div>
 
-        <div class="tbz-about-header-links tbz-font-color">
+        <div class="tbz-about-header-links">
           <span>
             <a
               href="https://linkedin.com/in/teebrysiewicz"
@@ -84,6 +87,4 @@
 
   </div>
   <div class="tbz-copyright">@ 2022 TB</div>
-
-
 </div>

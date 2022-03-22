@@ -1,4 +1,5 @@
-<div class="tbz-writtings-menu border-gradient">
+<div class="tbz-writtings-menu border-gradient {{if @showMenu 'tbz-open-menu' 'hidden'}}">
+  <h1 class="tbz-font-color tbz-header">Recent Writtings</h1>
   <ul>
     {{#each @model as |model|}}
       <li>
@@ -6,8 +7,15 @@
           aria-label="{{model.attributes.title}} Writtings Post"
           @route="writtings.post"
           @model={{model.attributes.slug}}
+          {{on "click" @openMenu}}
         >
-          {{model.attributes.title}}
+          <div class="menu-item-text">
+            <span>{{model.attributes.title}}</span>
+            <span>{{model.attributes.date}}</span>
+          </div>
+          {{#unless (media "isMobile")}}
+            <i class="fas  fa-chevron-right"></i>
+          {{/unless}}
         </LinkTo>
       </li>
     {{/each}}

@@ -1,3 +1,11 @@
+.tbz-hide {
+  display: none;
+}
+
+.tbz-show {
+  display: block;
+}
+
 .tbz {
   font-family: 'NanumBrushScript-Regular';
 }
@@ -11,29 +19,58 @@
 
 .tbz-header {
   font-family: 'Montserrat-Bold';
-  font-size: 5.625rem;
+  /*font-size: 10vw;*/
   font-weight: bold;
   background: linear-gradient(to right, #7927b2, #fb3182);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
   line-height: .77;
+
+  @screen md {
+    font-size: 4vw;
+  }
+
+  @screen lg {
+    font-size: 5.625rem;
+  }
 }
 
 .tbz-post-container {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 3.75rem;
+  padding: 2rem 1rem;
   padding-bottom: 100px;
   background: #fff;
   display: block;
   justify-content: center;
   align-items: center;
+
+  @screen lg {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 3.75rem;
+    padding-bottom: 100px;
+    background: #fff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .tbz-post-header{
   margin-bottom: 12px;
+  font-size: 8vw;
+
+  @screen md {
+    font-size: 3vw;
+  }
+
+  @screen lg {
+    font-size: 6vw;
+  }
 }
 
 .tbz-post-info {
@@ -58,6 +95,7 @@ body {
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
+  overflow: hidden;
 }
 
 @keyframes border {
@@ -104,7 +142,6 @@ body {
   position: relative;
   width: 100%;
   height: 85vh;
-  /*overflow: scroll;*/
   overflow: hidden;
   margin: auto;
   background-color: white;
@@ -115,33 +152,31 @@ body {
 }
 
 .tbz-navigation {
-  position: aboslute;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 78px;
+  height: 60px;
   background: #ffffff;
-  /*border: 1px solid red;*/
-  z-index: 99;
-  /*padding: 1.5rem;*/
+  z-index: 9999;
   display: flex;
-  line-height: 78px;
+  line-height: 60px;
   vertical-align: middle;
-  /*border-bottom: 1px solid;*/
-
 
   @screen lg {
     position: sticky;
     width: 100%;
+    height: auto;
+    line-height: 6vh;
     background: #ffffff;
     z-index: 99;
-    padding: 1.5rem;
+    padding: 1rem;
     display: flex;
-    /*line-height: 3.5rem;*/
-    line-height: 6vh;
     vertical-align: middle;
     border-bottom: 1px solid;
   }
 }
-
 
 .tbz-navigation ul {
   display: flex;
@@ -152,11 +187,11 @@ body {
   @screen lg {
     text-align: left;
     flex: 1;
+    margin-left: 1rem;
   }
 }
 
 .tbz-navigation-mobile-icon {
-  /*border: 4px solid red;*/
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -168,10 +203,16 @@ body {
   border: 1px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-  flex-basis: 20%;
+  flex-basis: 25%;
   text-align: center;
   font-size: 2rem;
   vertical-align: middle;
+
+  @screen lg {
+    border: none;
+    font-size: 1rem;
+
+  }
 }
 
 .tbz-navigation span {
@@ -179,22 +220,33 @@ body {
   @screen lg {
     flex: 1;
     text-align: right;
-    font-size: 48px;
+    font-size: 60px;
+    margin-right: 1rem;
   }
+}
+
+.writtings-nav-link {
+  pointer-events: none;
 }
 
 .tbz-menu-link {
   display: inline-block;
   width: 100%;
-  line-height: 78px;
+  line-height: 60px;
   vertical-align: middle;
   margin-top: -6px;
+  color: #CCC;
 
   @screen lg {
+    display: inline;
     margin-right: 2rem;
+    line-height: 6vh;
+    vertical-align: middle;
+    margin-top: 0;
+    text-transform: uppercase;
+    padding: .25rem;
   }
 }
-
 
 .tbz-menu-link i {
   width: 100%;
@@ -202,17 +254,21 @@ body {
 }
 
 .tbz-menu-link.active {
-  background: linear-gradient(to right, #7927b2, #fb3182);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-
   @screen lg {
+    background: linear-gradient(to right, #7927b2, #fb3182);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     border-bottom: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-    padding-bottom: 10px;
   }
+}
+
+.tbz-menu-link.active i {
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tbz-copyright {
@@ -228,22 +284,103 @@ body {
   display: flex;
   position: relative;
   width: 100%;
-  height: 84vh;
+  height: 85vh;
 
+  @screen lg {
+    height: 84vh;
+  }
+}
+
+.tbz-open-menu {
+  display: flex;
+  flex-direction: column;
 }
 
 .tbz-writtings-menu {
-  position: sticky;
+  display: hidden;
+  /*display: block;*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: white;
-  height: 80vh;
-  padding: 28px;
-  flex-basis: 20%;
+  height: 100%;
+  width: 100%;
   overflow: scroll;
-  border-right: 1px solid;
+
+  @screen md {
+    display: block;
+    position: sticky;
+    background-color: white;
+    height: 80vh;
+    padding: 28px;
+    flex-basis: 20%;
+    overflow: scroll;
+    border-right: 1px solid;
+  }
+}
+
+.tbz-writtings-menu h1 {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  font-size: 6vw;
+
+  @screen lg {
+    font-size: 2vh;
+    text-align: left;
+    padding: .5rem 0;
+  }
 }
 
 .tbz-writtings-menu li {
-  margin-bottom: 2rem;
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  display: inline-block;
+}
+
+.tbz-writtings-menu a {
+  display: flex;
+  flex-direction: row;
+  margin: 0 2rem;
+  flex-basis: 80%;
+
+  @screen md {
+    margin: 0 auto;
+  }
+}
+
+.tbz-writtings-menu .menu-item-text {
+  flex: 1;
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.tbz-writtings-menu span {
+  flex: 1;
+}
+
+.tbz-writtings-menu a.active {
+  @screen md {
+    border-bottom: none;
+  }
+}
+
+.tbz-writtings-menu i {
+  display: none;
+  flex: 1;
+  flex-basis: 20%;
+  font-size: 2vw;
+  margin: auto;
+  text-align: right;
+}
+
+.tbz-writtings-menu a.active > i {
+  display: inline-block;
 }
 
 .tbz-writtings-menu a.active {
@@ -251,32 +388,34 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-
-  border-bottom: 1px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-  padding-bottom: 10px;
 }
 
 .tbz-writtings-content {
-  flex-basis: 80%;
+  flex-basis: 100%;
   overflow: scroll;
-  height: 80vh;
+  height: 85vh;
+
+  @screen md {
+    flex-basis: 80%;
+    overflow: scroll;
+    height: 82vh;
+  }
 }
 
 /* Contact */
 .tbz-contact-header {
-  font-size: 3.5rem;
+  font-size: 12vw;
 
   text-align: center;
   display: block;
 
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   @screen lg {
     margin-top: 40px;
     margin-bottom: 40px;
+    font-size: 3.5rem;
   }
 }
 
@@ -318,7 +457,7 @@ body {
 
 .tbz-contact-container textarea {
   width: 100%;
-  height: 20rem;
+  height: 16rem;
   margin: 0 auto;
   padding: 8px;
   border: 1px solid;
@@ -342,7 +481,8 @@ body {
   overflow: scroll;
 
   @screen lg {
-    height: 80vh;
+    height: 80.75vh;
+    margin-bottom: 2rem;
   }
 }
 
@@ -360,24 +500,36 @@ body {
 
 .tbz-about-header-head {
   flex-basis: 80%;
-  line-height: 8.75rem;
-  vertical-align: middle;
+  line-height: 8rem;
 
   @screen lg {
-
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.tbz-about-header-head span {
+.tbz-about-header-head div {
   display: block;
+
+  @screen lg {
+    flex: 1;
+  }
 }
 
-.tbz-about-header-head span:first-child {
-  font-size: 28px;
+.tbz-about-header-head .first:first-child {
+  font-size: 10vw;
+
+  @screen lg {
+    font-size: 5rem;
+  }
 }
 
-.tbz-about-header-head span:last-child {
-  font-size: 36px;
+.tbz-about-header-head .last:last-child {
+  font-size: 8vw;
+
+  @screen lg {
+    font-size: 4.625rem;
+  }
 }
 
 .tbz-about-header-links {
@@ -409,11 +561,17 @@ body {
   }
 }
 
-.tbz-about-header-links a:hover {
+.tbz-about-header-links i:hover {
   background: linear-gradient(to right, #000, #CCC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+}
+
+.tbz-about-header-links i {
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tbz-about-summary-container {
@@ -480,7 +638,6 @@ body {
 .isotope_selector {
   flex: 1;
   flex-basis: 100%;
-  /*width: 20%;*/
   height: 200px;
   color: white;
   background: #3b3b3b;
