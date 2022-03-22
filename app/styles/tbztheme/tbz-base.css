@@ -36,47 +36,6 @@
   }
 }
 
-.tbz-post-container {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  padding-bottom: 100px;
-  background: #fff;
-  display: block;
-  justify-content: center;
-  align-items: center;
-
-  @screen lg {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 3.75rem;
-    padding-bottom: 100px;
-    background: #fff;
-    display: block;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.tbz-post-header{
-  margin-bottom: 12px;
-  font-size: 8vw;
-
-  @screen md {
-    font-size: 3vw;
-  }
-
-  @screen lg {
-    font-size: 6vw;
-  }
-}
-
-.tbz-post-info {
-  margin-bottom: 40px;
-}
-
 .border-gradient {
   /*border: 1px solid;*/
   border-image-slice: 1;
@@ -253,6 +212,12 @@ body {
   height: 100%;
 }
 
+.close-link i {
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .tbz-menu-link.active {
   @screen lg {
     background: linear-gradient(to right, #7927b2, #fb3182);
@@ -364,12 +329,6 @@ body {
   flex: 1;
 }
 
-.tbz-writtings-menu a.active {
-  @screen md {
-    border-bottom: none;
-  }
-}
-
 .tbz-writtings-menu i {
   display: none;
   flex: 1;
@@ -383,11 +342,21 @@ body {
   display: inline-block;
 }
 
+.tbz-writtings-menu a.active > div span {
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .tbz-writtings-menu a.active {
   background: linear-gradient(to right, #7927b2, #fb3182);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
+
+  @screen md {
+    border-bottom: none;
+  }
 }
 
 .tbz-writtings-content {
@@ -701,3 +670,46 @@ body {
   position: relative;
   bottom: 0;
 }
+
+/* Writtings Post */
+.tbz-post-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  padding-bottom: 100px;
+  background: #fff;
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+  @screen lg {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 3.75rem;
+    padding-bottom: 100px;
+    background: #fff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.tbz-post-header{
+  margin-bottom: 12px;
+  font-size: 8vw;
+
+  @screen md {
+    font-size: 3vw;
+  }
+
+  @screen lg {
+    font-size: 6vw;
+  }
+}
+
+.tbz-post-info {
+  margin-bottom: 40px;
+}
+

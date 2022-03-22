@@ -8,9 +8,4 @@ export default class WrittingsController extends Controller {
   @action openMenu() {
     this.showMenu = !this.showMenu;
   }
-
-  // @action
-  // openMenu() {
-  //   this.toggleProperty('showMenu');
-  // }
 }
