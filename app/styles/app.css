@@ -6,7 +6,7 @@
 @import 'base/variables';
 
 @import 'tbztheme/tbz-base';
-/*@import 'tbztheme/holo';*/
+@import 'tbztheme/markdown';
 
 /*@import 'components/notfound';
 @import 'components/navigation';

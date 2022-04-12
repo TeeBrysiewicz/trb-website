@@ -1,0 +1,110 @@
+/* Writtings Post */
+.tbz-post-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  padding-bottom: 100px;
+  background: #fff;
+  display: block;
+  justify-content: center;
+  align-items: center;
+
+  @screen lg {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 3.75rem;
+    padding-bottom: 100px;
+    background: #fff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.tbz-post-header{
+  margin-bottom: 12px;
+  font-size: 8vw;
+
+  @screen md {
+    font-size: 3vw;
+  }
+
+  @screen lg {
+    font-size: 6vw;
+  }
+}
+
+.tbz-post-info {
+  margin-bottom: 40px;
+}
+
+
+
+.tbz-post-container a {
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tbz-post-container h1 {
+  font-size: 4vw;
+
+  @screen md {
+    font-size: 6vw;
+  }
+  @screen lg {
+    font-size: 8vw;
+  }
+
+  font-family: 'Montserrat-Bold';
+  font-weight: bold;
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tbz-post-container h2 {
+  font-size: 1vw;
+
+  @screen md {
+    font-size: 2vw;
+  }
+  @screen lg {
+    font-size: 4vw;
+  }
+
+  font-family: 'Montserrat-Bold';
+  font-weight: bold;
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.tbz-post-container h3 {
+  font-size: 2vw;
+
+  @screen md {
+    font-size: 3vw;
+  }
+  @screen lg {
+    font-size: 2vw;
+  }
+
+  font-size: 1rem;
+  font-family: 'Montserrat-Regular';
+  background: linear-gradient(to right, #7927b2, #fb3182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.tbz-post-container ol {
+  list-style-type: upper-roman;
+}
+
+.tbz-post-container ul {
+  list-stype-type: initial;
+}

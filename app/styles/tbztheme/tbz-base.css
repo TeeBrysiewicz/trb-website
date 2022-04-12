@@ -49,13 +49,13 @@
   animation: gradient 15s ease infinite;
 }
 
-body {
+/*body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
   overflow: hidden;
-}
+}*/
 
 @keyframes border {
   0% {
@@ -670,46 +670,3 @@ body {
   position: relative;
   bottom: 0;
 }
-
-/* Writtings Post */
-.tbz-post-container {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  padding-bottom: 100px;
-  background: #fff;
-  display: block;
-  justify-content: center;
-  align-items: center;
-
-  @screen lg {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding: 3.75rem;
-    padding-bottom: 100px;
-    background: #fff;
-    display: block;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.tbz-post-header{
-  margin-bottom: 12px;
-  font-size: 8vw;
-
-  @screen md {
-    font-size: 3vw;
-  }
-
-  @screen lg {
-    font-size: 6vw;
-  }
-}
-
-.tbz-post-info {
-  margin-bottom: 40px;
-}
-
