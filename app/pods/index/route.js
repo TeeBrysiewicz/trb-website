@@ -5,6 +5,10 @@ export default class IndexRoute extends Route {
   @service router;
 
   beforeModel() {
-    this.router.transitionTo('/writtings');
+    // Revert Theme Setting
+    this.router.transitionTo('/landing');
+
+    // TBZ Theme Setting
+    // this.router.transitionTo('/writtings');
   }
 }
